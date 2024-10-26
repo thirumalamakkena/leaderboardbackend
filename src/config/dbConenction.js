@@ -12,7 +12,12 @@ if (!mongoUri) {
 export const connectDb = async () => {
  
   try {
-    await mongoose.connect(mongoUri);
+    await mongoose.connect(mongoUri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    });
     console.log("Database connected successfully");
   } catch (error) {
     console.error("Database connection error: ", error);
