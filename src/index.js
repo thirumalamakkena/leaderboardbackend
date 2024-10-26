@@ -49,7 +49,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(7000, async () => {
-  console.log("Server is running on port 7000");
-  await connectDb();
+connectDb().then(() => {
+  app.listen(7000, () => {
+    console.log(`Server running on port 7000`);
+  });
+}).catch(error => {
+  console.error("Failed to connect to the database. Server not started.", error);
 });
