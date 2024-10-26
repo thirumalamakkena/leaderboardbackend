@@ -1,0 +1,53 @@
+
+POST http://localhost:7000/api/auth/v1/register
+Content-Type: application/json
+
+{
+    "email": "lisa.hall@example.com",
+    "password": "lisapass456",
+    "firstName": "Lisa",
+    "lastName": "Hall",
+    "username": "lisahall"
+}
+
+
+### 
+
+GET http://localhost:7000/api/user/v1/get-users
+
+###
+POST http://localhost:7000/api/user/v1/get-users-info
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzFhNTUxYjBkZTkxZWM1NjA1ODA0NjkiLCJpYXQiOjE3Mjk3ODA1OTcsImV4cCI6MTcyOTg2Njk5N30.t-rf6uYhqL5qADJpV5Ielz67JRUGTxTy0lNU66DjDJE
+
+###
+POST http://localhost:7000/api/user/v1/your-history
+Content-Type: application/json
+
+{
+    "username": "shanmukh"
+}
+
+###
+
+GET http://localhost:7000/api/user/v1/your-weekly-history
+
+
+###
+PATCH http://localhost:7000/api/user/v1/claim-points
+Content-Type: application/json
+
+{
+    "username": "shanmukh"
+}
+
+###
+
+POST http://localhost:7000/api/auth/v1/login 
+Content-Type: application/json
+
+{
+    "username": "thirumala",
+    "password": "password"  
+}
+
+
