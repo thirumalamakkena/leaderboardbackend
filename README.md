@@ -23,4 +23,4 @@ The backend server will start on `http://localhost:7000`.
 - `GET`: `http://localhost:7000/api/user/v1/get-users` to fetch the list of all users for the leaderboard.
 - `GET`: `http://localhost:7000/api/user/v1/get-users-info-id` to retrieve the logged-in user's information.
 
-thankyou
+
